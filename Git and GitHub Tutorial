@@ -1,0 +1,171 @@
+Git and GitHub Tutorial
+
+Git
+- Version control is crucial for tracking changes in code, and Git serves as a popular, free, and open-source version control system known for its speed and scalability.
+  - Details:
+    - Popularity: Git is widely used in the software development community.
+    - Open Source: It is freely available, allowing developers to contribute and modify its source code.
+    - Speed & Scalability: Git is known for its fast performance and ability to handle large projects efficiently.
+  - Example:
+    - Git commands:
+      - git init
+      - git add .
+      - git commit -m "Initial commit"
+
+GitHub
+- GitHub is a web-based platform that facilitates code hosting and collaborative development, enabling developers to store and manage their code using Git.
+  - Details:
+    - Web Platform: GitHub provides a user-friendly interface for code repositories and collaboration.
+    - Centralized Repository: Developers can store their Git repositories on GitHub for easy access and sharing.
+  - Example:
+    - Visit GitHub (https://github.com/) to explore and manage repositories.
+
+Configuring Git
+- Configuring Git involves setting user information to track code changes properly.
+  - Details:
+    - Set User Name: git config --global user.name "Your Name"
+    - Set User Email: git config --global user.email "your.email@example.com"
+    - List Configuration: git config --list
+
+Clone & Status
+- Cloning a repository and checking the status of your code are fundamental Git commands.
+  - Details:
+    - Clone Repository: git clone <repository_link>
+    - Check Status: git status
+  - Example:
+    - git clone https://github.com/example/repo.git
+    - git status
+
+Git Status
+- Understanding Git status helps identify the state of files in your working directory.
+  - Status Types:
+    - Untracked: New files not yet tracked by Git.
+    - Modified: Files with changes.
+    - Staged: Files ready to be committed.
+    - Unmodified: Files without changes.
+
+Add & Commit
+- Adding and committing changes create a record of modifications in the codebase.
+  - Details:
+    - Add Changes: git add <file_name> or git add .
+    - Commit Changes: git commit -m "Descriptive message"
+  - Example:
+    - git add example.html
+    - git commit -m "Added a new feature"
+
+Push Command
+- Pushing updates to a remote repository ensures changes are uploaded.
+  - Details:
+    - Push to Main Branch: git push origin main
+
+Init Command
+- Initializing a Git repository and setting up remote connections.
+  - Details:
+    - Initialize Repository: git init
+    - Add Remote Origin: git remote add origin <repository_link>
+  - Example:
+    - git init
+    - git remote add origin https://github.com/your_username/your_repo.git
+    - git push origin main
+
+Workflow (Local Git)
+- A simplified local Git workflow for better understanding.
+  - Workflow:
+    - GitHub Repo ➔ Clone ➔ Make Changes ➔ Add ➔ Commit ➔ Push
+
+Git Branch (Branch Commands)
+- Managing branches is essential for parallel development and code organization.
+  - Details:
+    - Check Branches: git branch
+    - Create Branch: git checkout -b <new_branch_name>
+    - Delete Branch: git branch -d <branch_name>
+  - Example:
+    - git branch feature-branch
+    - git checkout feature-branch
+
+Merging Code
+- Two methods for merging code changes, either directly using Git commands or by creating a pull request.
+  - Method 1:
+    - Diff Changes: git diff <branch_name>
+    - Merge Branches: git merge <branch_name>
+  - Method 2:
+    - Create Pull Request: Submit changes on GitHub for review and merging.
+
+Pull Request
+- Pull requests are used to propose and discuss changes before merging them into the main codebase.
+  - Details:
+    - Purpose: Requesting the integration of changes from one branch to another.
+
+Pull Command
+- Pulling updates from a remote repository to synchronize local and remote codebases.
+  - Details:
+    - Pull from Main: git pull origin main
+
+Resolving Merge Conflicts
+- Conflict resolution occurs when Git cannot automatically merge changes.
+  - Steps:
+    - Identify conflicting lines marked by "<<<<<<< HEAD" and ">>>>>>> main".
+    - Manually resolve conflicts and commit changes.
+
+Undoing Changes
+- Undoing changes involves reverting to a previous state.
+  - Case 1: Staged Changes:
+    - git reset <file_name> or git reset
+  - Case 2: Committed Changes (One Commit):
+    - git reset HEAD~1
+  - Case 3: Committed Changes (Multiple Commits):
+    - git reset <commit_hash> or git reset --hard <commit_hash>
+
+Fork
+- Forking creates a copy of a repository for collaborative development without affecting the original.
+  - Details:
+    - Purpose: To contribute to a project while maintaining an independent copy.
+  - Example:
+    - Fork a repository on GitHub to create your copy for experimentation or improvement.
+
+Submodules
+- Submodules allow incorporating external repositories into a project, maintaining separate repositories within a single project.
+  - Details:
+    - Add Submodule: git submodule add <repository_link> <destination_folder>
+    - Update Submodules: git submodule update --recursive --remote
+  - Example:
+    - git submodule add https://github.com/example/submodule.git subfolder
+    - git submodule update --recursive --remote
+
+Gitignore
+- The .gitignore file specifies intentionally untracked files to be ignored by Git, such as build files or sensitive information.
+  - Details:
+    - Create .gitignore: List files and patterns to be ignored.
+  - Example:
+    - # .gitignore
+      - node_modules/
+      - build/
+      - config.js
+
+Git Log
+- Git log displays a detailed commit history, showing who made changes, when, and the commit messages.
+  - Details:
+    - View Log: git log
+  - Example:
+    - git log
+
+Git Tag
+- Git tags are labels for specific points in Git history, commonly used to mark release points.
+  - Details:
+    - Create Tag: git tag <tag_name>
+  - Example:
+    - git tag v1.0.0
+
+Rebase
+- Rebasing allows integrating changes from one branch to another by moving or combining commits.
+  - Details:
+    - Rebase: git rebase <branch_name>
+  - Example:
+    - git checkout feature-branch
+    - git rebase main
+
+Git Cherry-Pick
+- Cherry-picking enables selecting specific commits from one branch and applying them to another.
+  - Details:
+    - Cherry-Pick: git cherry-pick <commit_hash>
+ 
